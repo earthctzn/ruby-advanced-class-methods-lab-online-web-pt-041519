@@ -44,8 +44,8 @@ class Song
   
   def self.new_from_filename(file_data)
     x = file_data.split(/\.|\s-\s/).reject{|word| word == "mp3"}
-    name = x[1]
-    self.all.save
+    #name = x[1]
+    save
     # artist_name = x[0]
     # self.
     # # binding.pry
