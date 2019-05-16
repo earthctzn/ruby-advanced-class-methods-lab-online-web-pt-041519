@@ -46,7 +46,7 @@ class Song
     x = file_data.split(/\.|\s-\s/).reject{|word| word == "mp3"}
     @artist_name = x[0]
     @name = x[1]
-    binding.pry 
+    #binding.pry 
   end
   
   def self.destroy_all
