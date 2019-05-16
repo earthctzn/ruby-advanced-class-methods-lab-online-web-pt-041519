@@ -46,7 +46,7 @@ class Song
     x = file_data.split(/\.|\s-\s/).reject{|word| word == "mp3"}
     name = x[1]
     artist_name = x[0]
-    song = self.song_by_name(name)
+    song = self.new_by_name(name)
     song.artist_name = artist_name
     song
   end
