@@ -51,13 +51,8 @@ class Song
     song
   end
   
-   def self.new_from_filename(file_data)
-    x = file_data.split(/\.|\s-\s/).reject{|word| word == "mp3"}
-    name = x[1]
-    artist_name = x[0]
-    song = self.new_by_name(name)
-    song.artist_name = artist_name
-    song
+   def self.create_from_filename(file_data)
+    song = self.new_from_filename(file_data).save
   end
   
   def self.destroy_all
